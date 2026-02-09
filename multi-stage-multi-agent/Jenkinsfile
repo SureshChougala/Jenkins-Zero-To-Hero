@@ -7,6 +7,7 @@ pipeline {
       }
       steps {
         sh 'mvn --version'
+        sh 'sleep 60'
       }
     }
     stage('Front-end') {
@@ -15,6 +16,7 @@ pipeline {
       }
       steps {
         sh 'node --version'
+        sh 'sleep 60'
       }
     }
   }
