@@ -26,6 +26,7 @@ pipeline {
                     echo 'Buid Docker Image'
                     docker build -t sureshchougala/python_app:${BUILD_NUMBER} .
                     '''
+                    }
                 }
                 }
             }
