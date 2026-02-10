@@ -22,7 +22,7 @@ pipeline {
                 script{
                     withCredentials([usernamePassword(credentialsId: 'dockerhub-pat', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     sh '''
-                    docker login -u $DOCKER_USER -p $DOCKER_PASS
+                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
                     echo 'Buid Docker Image'
                     docker build -t sureshchougala/python_app:${BUILD_NUMBER} .
                     '''
