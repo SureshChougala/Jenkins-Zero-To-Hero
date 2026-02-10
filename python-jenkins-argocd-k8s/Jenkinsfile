@@ -22,7 +22,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t python_app:${BUILD_NUMBER} .
+                    docker build -t sureshchougala/python_app:${BUILD_NUMBER} .
                     '''
                 }
                 }
@@ -34,7 +34,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Push to Repo'
-                    docker push python_app:${BUILD_NUMBER}
+                    docker push sureshchougala/python_app:${BUILD_NUMBER}
                     '''
                 }
             }
