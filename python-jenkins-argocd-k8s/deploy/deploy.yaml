@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: todo
-        image: abhishekf5/todo-app:v1
+        image: sureshch/python_app:24
         ports:
         - containerPort: 8000
